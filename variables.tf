@@ -56,6 +56,12 @@ variable "aws_security_group_ids" {
   description = "AWS 安全群組"
 }
 
+variable "aws_ecs_health_check_grace_period_seconds" {
+  type        = number
+  default     = 120
+  description = "ELB HealthCheck 忽略時間 (單位：秒)"
+}
+
 # ============================
 # AWS LB
 # ============================

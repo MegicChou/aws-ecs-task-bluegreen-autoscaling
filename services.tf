@@ -12,7 +12,7 @@ resource "aws_ecs_service" "main_service" {
   # ===========================
   # ELB HealthCheck 忽略時間 (單位：秒)
   # ===========================
-  health_check_grace_period_seconds = 120
+  health_check_grace_period_seconds = var.aws_ecs_health_check_grace_period_seconds
 
   # ===========================
   # AWS ECS 網路設定
