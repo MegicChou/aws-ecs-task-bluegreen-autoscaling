@@ -43,6 +43,6 @@ resource "aws_ecs_service" "main_service" {
   # 忽略以下設定值異動
   # ===========================
   lifecycle {
-    ignore_changes = [desired_count, task_definition]
+    ignore_changes = [desired_count, task_definition, load_balancer]
   }
 }
